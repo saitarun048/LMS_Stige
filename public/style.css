@@ -1,0 +1,145 @@
+body {
+
+  margin: 10px 30px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  background: #ffffff;
+  background-image: url('https://cdn.hipwallpaper.com/i/0/39/ZSkIzy.jpg');
+  background-position: right;
+  background-repeat: no-repeat;
+
+}
+
+footer {
+  text-align: center;
+  margin-top: 150px;
+  color: rgb(0, 0, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-bottom: 120px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin-left: 20px;
+
+}
+
+nav li a {
+  font-weight: 700;
+  font-size: 0.6em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+
+.btn {
+  border-radius: 36px;
+  background-color: red;
+}
+
+form h2 {
+  font-size: 1.6em;
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+form {
+  width: 400px;
+  background-color: rgb(201, 196, 196);
+  cursor: pointer;
+  padding: 30px;
+  margin-left: 100px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+input {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin: 20px 0 10px;
+
+}
+
+button {
+  margin-top: 30px;
+  background: #ff0000;
+  border: 0;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 12px 20px;
+  margin: 0 auto;
+
+}
+
+.error {
+  color: #1100ff;
+  margin: 10px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  width: 250px;
+  margin-right: 40px;
+}
+
+header h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+header h3 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  color: #999;
+}
+
+header .btn {
+  margin-top: 20px;
+  padding: 12px 18px;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 0.8em;
+}
+
+.coursesweeks {
+  margin-top: 60px;
+}

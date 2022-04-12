@@ -1,0 +1,61 @@
+<%- include('partials/header'); -%>
+  <h1 style="text-align: center;">TASKS</h1>
+  <form action="/task">
+    <label for="description">DESCRIPTION:</label>
+    <input type="text" name="description" required />
+    <div class="description error"></div>
+
+    <label for="completed">COMPLETED OR NOT COMPLETED</label>
+    <select name="cars" id="cars" required>
+      <option value="true">TRUE</option>
+      <option value="false">FALSE</option>
+    </select>
+    <div class="completed error"></div>
+
+    <label for="date">DATE</label>
+    <input type="date" name="date" required />
+    <div class="date error"></div>
+
+
+    <button>SUBMIT</button>
+
+  </form>
+
+
+  <%- include('partials/footer'); -%>
+
+    <script>
+      const form = document.querySelector('form');
+      const descriptionError = document.querySelector('.description.error');
+      const completedError = document.querySelector('.completed.error');
+      const dateError = document.querySelector('.date.error');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        descriptionError.textContent = '';
+        completedError.textContent = "";
+        dateError.textContent = "";
+        const description = form.description.value;
+        const completed = form.completed.value;
+        const date = form.date.value;
+
+        try {
+          const res = await fetch('/task', {
+            method: 'POST',
+            body: JSON.stringify({ description, completed, date }),
+            headers: { 'Content-Type': 'application/json' }
+          });
+          const data = await res.json();
+          if (data.errors) {
+            descriptionError.textContent = data.errors.description;
+            completedError.textContent = data.errors.completed;
+            dateError.textContent = data.errors.date;
+          }
+          if (data.user) {
+            location.assign('/');
+          }
+        }
+        catch (err) {
+          console.log(err);
+        }
+      });
+    </script>
